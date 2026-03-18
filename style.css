@@ -51,24 +51,28 @@ body {
   align-items: center;
 }
 
+.navbar__s4 {
+  display: none;
+}
+
 /* My Learning Popup*/
 
-.mylearning{
+.mylearning {
   position: relative;
   cursor: pointer;
 }
 
-.mylearning__popup{
-position: absolute;
-background-color: white;
-border: solid black 1px;
-width: 100px ;
-top: 120%;
-padding: 20px;
-display: none;
+.mylearning__popup {
+  position: absolute;
+  background-color: white;
+  border: solid black 1px;
+  width: 100px;
+  top: 120%;
+  padding: 20px;
+  display: none;
 }
 
-.mylearning:hover .mylearning__popup{
+.mylearning:hover .mylearning__popup {
   display: block;
 }
 
@@ -87,14 +91,14 @@ display: none;
   cursor: pointer;
 }
 
-.categories p:hover{
+.categories p:hover {
   transition: 1s;
   background-color: transparent;
   color: black;
   border: #9647C4 1px;
 }
 
-.sale-image{
+.sale-image {
   position: relative;
 }
 
@@ -102,7 +106,7 @@ display: none;
   width: 100%;
 }
 
-.sale-image-offer{
+.sale-image-offer {
   width: 35%;
   border: solid black 2px;
   background-color: white;
@@ -118,16 +122,16 @@ display: none;
 
 
 @keyframes zoom {
-  0%{
+  0% {
     transform: scale(0);
     opacity: 0;
   }
 
-  100%{
+  100% {
     opacity: 1;
     transform: scale(1);
   }
-  
+
 }
 
 .recommended {
@@ -144,8 +148,9 @@ display: none;
 }
 
 .course-card {
-  width: 23%
-
+  flex-grow: 1;
+  flex-basis: 20%;
+  margin: 5px;
 }
 
 .course-card img {
@@ -183,27 +188,52 @@ display: none;
 
 }
 
-.footer{
+.footer {
   padding: 30px;
   background-color: black;
   color: white;
 }
 
-.footer__one{
+.footer__one {
   display: flex;
   gap: 10px;
 
 }
 
-.footer__one p{
+.footer__one p {
   margin: 20px;
 
 }
 
-.footer__two{
+.footer__two {
   margin: 20px;
   align-items: center;
   display: flex;
   justify-content: space-between
+}
 
+/* Media Queries */
+
+@media screen and (max-width:800px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width:600px) {
+ .course-card {
+    flex-basis: 40%;
+  }
+
+.categories{
+display: none;
+}
+.navbar_s2,.navbar_s3{
+display: none;
+
+}
+
+.navbar__s4{
+  display: block;
+}
 }
